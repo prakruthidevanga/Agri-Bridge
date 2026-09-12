@@ -1,4 +1,4 @@
-# 🌾 Agri-Bridge (AgroSmart)
+# 🌾 Agri-Bridge 
 > **AI-Enabled Multilingual Circular Economy Platform for Smallholder Farmers**
 
 [![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
