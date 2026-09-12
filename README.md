@@ -67,26 +67,6 @@ graph TD
 
 ---
 
-## 💻 Local Installation & Setup
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/prakruthidevanga/Agri-Bridge.git
-
-# 2. Navigate to directory
-cd Agri-Bridge
-
-# 3. Install dependencies
-npm install
-
-# 4. Start local development server
-npm run dev
-
-# 5. Build production distribution
-npm run build
-```
-
----
 
 ## 👥 Team Agri-Bridge (Argonyx '26)
 
