@@ -1,0 +1,10 @@
+/* Hero styles */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: #f4e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
