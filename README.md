@@ -1,4 +1,4 @@
-# 🌾 Agri-Bridge 
+# 🌾 Agri-Smart 
 > **AI-Enabled Multilingual Circular Economy Platform for Smallholder Farmers**
 
 [![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
@@ -72,9 +72,8 @@ graph TD
 
 * **Prakruthi BR** — *Team Lead & Frontend Architect*
 * **Keerthi N** — *AI/ML & Core Logic Lead*
-* **Bhumika R** — *Full Stack & Glassmorphism UI*
-* **Pragathi BR** — *Carbon Accounting & Data Systems*
+
 
 ---
 
-*Developed for Argonyx '26 Hackathon @ Alliance University & RV University.*
+
