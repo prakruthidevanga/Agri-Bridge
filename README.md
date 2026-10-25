@@ -97,13 +97,5 @@ npm run build
 
 ---
 
-## 👥 Team Agri-Bridge (Argonyx '26)
 
-* **Prakruthi BR** — *Team Lead & Frontend Architect*
-* **Keerthi N** — *AI/ML & Core Logic Lead*
-* **Bhumika R** — *Full Stack & Glassmorphism UI*
-* **Pragathi BR** — *Carbon Accounting & Data Systems*
 
----
-
-*Developed for Argonyx '26 Hackathon @ Alliance University & RV University.*
