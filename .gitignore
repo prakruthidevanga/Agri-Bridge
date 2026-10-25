@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Python
+backend/__pycache__/
+backend/venv/
+*.pyc
+# Local Application Data & Backups
+backend/data/
+*.tmp
+
+# Local recovery & scratch scripts
+recover.cjs
+recover2.cjs
+# Presentation and report files (keep local only)
+/ARGI-BRIDGE_Project_(Prakruthi BR, Keerthi N).pdf
+/AgriBridge_Prakruthi.pdf
+/AgriBridge_Prakruthi.pptx
+/Argonyx'26-PPT.pptx

@@ -1,4 +1,4 @@
-# 🌾 Agri-Smart 
+# 🌾 Agri-Bridge (AgroSmart)
 > **AI-Enabled Multilingual Circular Economy Platform for Smallholder Farmers**
 
 [![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
@@ -61,19 +61,49 @@ graph TD
 ```
 
 * **Frontend Framework**: React.js 18 with Vite HMR
+* **Backend Framework**: FastAPI (Python 3.10+) with Uvicorn
+* **Database**: MongoDB (Atlas Cloud / Local) with Motor Async Driver
+* **AI & Intelligence**: Google Gemini API via custom service layer
 * **Styling & UI**: Modern Glassmorphism CSS3, Responsive CSS Grid
 * **Voice & Device APIs**: Web Speech API (`SpeechRecognition` & `SpeechSynthesis`), `MediaDevices` API, `FileReader` API
 * **Deployment & CI/CD**: Netlify Production Build Edge Hosting
 
 ---
 
+## 💻 Local Installation & Setup
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/prakruthidevanga/Agri-Bridge.git
+
+# 2. Navigate to directory
+cd Agri-Bridge
+
+# 3. Install frontend dependencies
+npm install
+
+# 4. Install backend dependencies
+pip install -r backend/requirements.txt
+
+# 5. Start backend server (port 8000)
+uvicorn --app-dir backend main:app --reload --port 8000
+
+# 6. Start frontend development server
+npm run dev
+
+# 7. Build production distribution
+npm run build
+```
+
+---
 
 ## 👥 Team Agri-Bridge (Argonyx '26)
 
 * **Prakruthi BR** — *Team Lead & Frontend Architect*
 * **Keerthi N** — *AI/ML & Core Logic Lead*
-
+* **Bhumika R** — *Full Stack & Glassmorphism UI*
+* **Pragathi BR** — *Carbon Accounting & Data Systems*
 
 ---
 
-
+*Developed for Argonyx '26 Hackathon @ Alliance University & RV University.*
