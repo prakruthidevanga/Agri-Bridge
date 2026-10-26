@@ -804,6 +804,7 @@ function WasteTab({ role, user, myListings, setMyListings, myDeals, setMyDeals, 
   const [posted, setPosted] = useState(false);
   const [form, setForm] = useState({ type:"", qty:"", price:"", location:"", date:"" });
   const [errors, setErrors] = useState({});
+  const today = new Date().toISOString().split("T")[0];
   const resultRef = useRef(null);
 
   const filters = ["All","Paddy","Sugarcane","Coconut","Cotton","Rice Bran","Banana","Groundnut"];
