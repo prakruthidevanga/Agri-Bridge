@@ -1,101 +1,209 @@
 # 🌾 Agri-Bridge (AgroSmart)
-> **AI-Enabled Multilingual Circular Economy Platform for Smallholder Farmers**
 
-[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-Fast-646CFF.svg)](https://vitejs.dev/)
-[![Web Speech API](https://img.shields.io/badge/Web%20Speech%20API-Voice%20AI-brightgreen.svg)]()
-[![Languages](https://img.shields.io/badge/Localization-6%20Indic%20Languages-orange.svg)]()
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)]()
-[![Hackathon](https://img.shields.io/badge/Argonyx'26-Hackathon%20MVP-success.svg)]()
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:14532D,50:15803D,100:84CC16&height=220&section=header&text=Agri-Bridge&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=AI-Enabled%20Multilingual%20Circular%20Economy%20for%20Smallholder%20Farmers&descSize=15&descAlignY=68" width="100%" alt="Agri-Bridge Banner"/>
+</p>
 
----
+<p align="center">
+  A mobile-first peer-to-peer (P2P) agricultural biomass marketplace connecting smallholder farmers directly with industrial buyers to trade crop residue, eliminate seasonal stubble burning, and automate farmer profits and CO₂ offsets with multilingual voice navigation.
+</p>
 
-## 📌 Executive Summary
+<p align="center">
+  <a href="https://github.com/prakruthidevanga/Agri-Bridge">
+    <img src="https://img.shields.io/badge/💻_Codebase-GitHub_Repository-1F2937?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/>
+  </a>
+</p>
 
-Open-field agricultural residue burning (stubble burning) releases over **149 million tonnes** of crop residue smoke into India's atmosphere annually, worsening winter smog and depleting topsoil nutrients. Simultaneously, smallholder farmers lose **25%–40%** of their market earnings to predatory middlemen due to price opacity and digital literacy barriers.
-
-**Agri-Bridge** bridges this gap by introducing a **decentralized B2B circular economy marketplace** connecting farmers directly with industrial bioenergy, paper, and packaging plants, while removing digital literacy friction through a **hands-free Voice AI interface** available in **6 Indic languages**.
-
----
-
-## 🚀 Key Features
-
-### 1. 🌾 P2P Biomass Circular Marketplace
-* **Direct B2B Stubble Trade**: Farmers list surplus crop residue (paddy straw, sugarcane bagasse, cotton stalks, coconut husk) directly for industrial buyers.
-* **Automated Carbon Accounting Engine**: Instantly computes expected farmer profit (₹) and metric tonnes of **CO₂ emissions prevented** from open field burning.
-* **Proximity-Based Routing**: Industrial buyers filter regional listings by GPS radius (km) to minimize freight transit and haulage costs.
-
-### 2. 🎙️ Voice AI & Vernacular UX (Zero Literacy Friction)
-* **Web Speech API Navigation**: Floating microphone widget allowing farmers to verbally navigate the platform in natural mother-tongue spoken commands (e.g. *"Market"*, *"Scanner"*, *"Prices"*).
-* **6 Regional Indian Languages**: Instant translation toggles for **Hindi, Kannada, Tamil, Telugu, Malayalam, and English**.
-* **Voice-Assisted AI Chatbot**: Converts spoken queries into structured advisories for crop protection, fertilizer schedules, and government subsidies.
-
-### 3. 📸 AI Plant Doctor & Mandi Intelligence
-* **Computer Vision Diagnostics**: Animated green laser canvas scanner diagnoses leaf infections from uploaded/captured camera photos and prescribes organic remedies.
-* **Dynamic APMC Mandi Ticker**: Real-time market prices with rise/fall trend indicators, bypassing predatory middlemen.
-* **Carbon Credit Leaderboard**: Gamifies stubble-free agriculture, ranking top regional farmers with *Eco-Champion* badges.
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-14532D?style=flat-square" alt="React 18"/>
+  <img src="https://img.shields.io/badge/Voice%20AI-Web%20Speech%20API-15803D?style=flat-square" alt="Web Speech API"/>
+  <img src="https://img.shields.io/badge/Languages-6%20Indian%20Languages-166534?style=flat-square" alt="6 Languages"/>
+  <img src="https://img.shields.io/badge/Backend-FastAPI%20%2F%20Python-059669?style=flat-square" alt="FastAPI Backend"/>
+  <img src="https://img.shields.io/badge/Deployment-Netlify%20Production-10B981?style=flat-square" alt="Netlify Deployment"/>
+</p>
 
 ---
 
-## 📊 Quantified Impact
+## 📌 Table of Contents
 
-| Metric | Target / Impact Value |
-| :--- | :--- |
-| 💨 **Stubble Diverted** | **10,000+ Tonnes** per regional cluster annually |
-| 🌿 **CO₂e Abated** | **15,000+ Tonnes** of greenhouse gas emissions prevented |
-| 💰 **Farmer Income Uplift** | **+25% to 35%** supplementary earnings injected into rural households |
-| 🗣️ **Linguistic Inclusion** | **100% Voice-guided coverage** across 6 Indian dialects |
+- [📖 Project Overview](#-project-overview)
+- [🎯 Objectives](#-objectives)
+- [✨ Key Features](#-key-features)
+- [🗣️ Multilingual Voice Navigation](#️-multilingual-voice-navigation)
+- [🏗️ System Architecture & Workflow](#️-system-architecture--workflow)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [📁 Repository Structure](#-repository-structure)
+- [⚙️ Installation and Setup](#️-installation-and-setup)
+- [🔮 Future Enhancements](#-future-enhancements)
+- [🤝 Contributing](#-contributing)
+- [👩‍💻 Author & Accreditations](#-author--accreditations)
 
 ---
 
-## 🛠️ Technology Architecture & Stack
+## 📖 Project Overview
+
+Across rural India, seasonal **crop residue burning (stubble burning)** creates severe environmental hazards, releasing millions of tons of particulate matter ($PM_{2.5}$) and greenhouse gases into the atmosphere while degrading topsoil fertility. Smallholder farmers frequently burn residue because they lack access to industrial buyers, transparent logistics, and digital tools tailored to non-English speakers.
+
+**Agri-Bridge (AgroSmart)** resolves this challenge by building an accessible circular economy platform. Farmers list agricultural biomass (paddy straw, wheat stubble, sugarcane bagasse, cotton stalks) and connect directly with biofuel, paper, and packaging enterprises. The platform automatically calculates farmer earnings, projects carbon offsets, and integrates voice navigation across **6 regional languages** to ensure zero digital barriers.
+
+🌱 **Core Mission:** Convert agricultural waste into a reliable revenue stream while eliminating stubble burning through accessible voice AI.
+
+---
+
+## 🎯 Objectives
+
+- 🌾 **Eliminate Stubble Burning:** Divert agricultural crop residue from open field fires into industrial supply chains.
+- 💰 **Supplement Rural Incomes:** Create direct-to-industry monetization channels for farm waste without intermediary exploitation.
+- 🗣️ **Overcome Language Barriers:** Provide full speech-to-text voice navigation and conversational assistance in regional Indian dialects.
+- 💨 **Quantify Carbon Offsets:** Dynamically compute metric tons of $CO_2$ emissions avoided per biomass transaction.
+- 🏆 **Incentivize Sustainable Farming:** Reward farmers with redeemable carbon credit tokens.
+
+---
+
+## ✨ Key Features
+
+### 🛒 1. Direct P2P Biomass Marketplace
+Farmers create structured listings detailing residue type, quantity (in quintals or tons), moisture content, and pickup location, allowing verified industrial procurement teams to place direct bids.
+
+### 🗣️ 2. Regional Voice Assistant (6 Languages)
+Integrated **Web Speech API** enables farmers to speak to the app in:
+- **Kannada** (ಕನ್ನಡ)
+- **Hindi** (हिन्दी)
+- **Telugu** (తెలుగు)
+- **Tamil** (தமிழ்)
+- **Marathi** (मराठी)
+- **English**
+
+### 📉 3. Automated Revenue & CO₂ Offset Calculator
+Each listing dynamically calculates estimated fair market price and environmental impact:
+$$\text{CO}_2\text{ Offset (kg)} = \text{Residue Quantity (kg)} \times \text{Emission Factor}$$
+
+### 🌿 4. AI Crop Disease Scanner
+Interactive camera module enabling farmers to take leaf photos and retrieve immediate diagnosis guidelines and recommended treatments.
+
+---
+
+## 🏗️ System Architecture & Workflow
 
 ```mermaid
-graph TD
-    A[Farmer / Industrial Buyer] -->|Voice Commands / Touch UI| B[React 18 + Vite PWA Client]
-    B -->|Language Dictionary| C[6 Indic Localization Engine]
-    B -->|Web Speech API| D[Native Speech Recognition & Synthesis]
-    B -->|HTML5 Canvas| E[AI Leaf Diagnostic Scanner]
-    B -->|Carbon Math Engine| F[CO2 Offset & Profit Calculator]
-    F --> G[B2B Industrial Deals + APMC Mandi Feeds]
+flowchart TD
+    A["Farmer (Speaks in Kannada/Hindi/Telugu/etc.)"] --> B["Web Speech API (Voice Recognition)"]
+    B --> C["Vite / React 18 Frontend Interface"]
+    C --> D["Biomass Listing & Price Calculator"]
+    D --> E["FastAPI / Flask Backend Services"]
+    E --> F["Industrial Buyer Matching & Logistics"]
+    F --> G["Verified Transaction -> Carbon Credits Issued"]
 ```
-
-* **Frontend Framework**: React.js 18 with Vite HMR
-* **Backend Framework**: FastAPI (Python 3.10+) with Uvicorn
-* **Database**: MongoDB (Atlas Cloud / Local) with Motor Async Driver
-* **AI & Intelligence**: Google Gemini API via custom service layer
-* **Styling & UI**: Modern Glassmorphism CSS3, Responsive CSS Grid
-* **Voice & Device APIs**: Web Speech API (`SpeechRecognition` & `SpeechSynthesis`), `MediaDevices` API, `FileReader` API
-* **Deployment & CI/CD**: Netlify Production Build Edge Hosting
 
 ---
 
-## 💻 Local Installation & Setup
+## 🛠️ Technology Stack
 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,python,fastapi,git,github,vscode&theme=dark" alt="Agri-Bridge Tech Stack"/>
+</p>
+
+| Component | Technology | Implementation Details |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React 18 & Vite | Blazing fast client rendering, modular component trees, state management |
+| **Styling & Design** | Tailwind CSS | Mobile-first responsive UI, high contrast color palette for outdoor readability |
+| **Voice Interface** | Web Speech API | Client-side speech recognition (`webkitSpeechRecognition`) and text-to-speech synthesis |
+| **Backend Services** | FastAPI / Python | High-performance asynchronous REST endpoints for marketplace matching |
+| **Deployment** | Netlify / Vercel | Instant global edge delivery and continuous CI/CD deployments |
+
+---
+
+## 📁 Repository Structure
+
+```text
+Agri-Bridge/
+├── backend/
+│   ├── auth.py                  # JWT authentication and user session management
+│   ├── database.py              # Database configuration and connection pool
+│   ├── gemini_service.py        # GenAI agricultural advisory service
+│   ├── main.py                  # FastAPI application entry point
+│   ├── requirements.txt         # Python backend dependencies
+│   └── .env.example             # Sanitized environment template
+├── src/                         # React frontend source
+│   ├── components/              # Marketplace cards, voice assistants, and scanners
+│   ├── App.jsx                  # Main application orchestrator
+│   └── index.css                # Tailwind styling rules
+├── package.json                 # Frontend dependencies and build scripts
+├── vite.config.js               # Vite bundler configuration
+└── README.md                    # Project documentation
+```
+
+---
+
+## ⚙️ Installation and Setup
+
+### Prerequisites
+- Node.js (v18 or higher)
+- Python 3.9 or higher
+- Git
+
+### Step 1: Clone Repository
 ```bash
-# 1. Clone the repository
 git clone https://github.com/prakruthidevanga/Agri-Bridge.git
-
-# 2. Navigate to directory
 cd Agri-Bridge
-
-# 3. Install frontend dependencies
-npm install
-
-# 4. Install backend dependencies
-pip install -r backend/requirements.txt
-
-# 5. Start backend server (port 8000)
-uvicorn --app-dir backend main:app --reload --port 8000
-
-# 6. Start frontend development server
-npm run dev
-
-# 7. Build production distribution
-npm run build
 ```
+
+### Step 2: Set Up Backend
+```bash
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python main.py
+```
+
+### Step 3: Set Up Frontend
+Open a separate terminal:
+```bash
+npm install
+npm run dev
+```
+*Open `http://localhost:5173` in your browser.*
 
 ---
 
+## 🔮 Future Enhancements
 
+- 🛰️ **Satellite Field Verification:** Integration with ISRO Bhuvan and Sentinel-2 APIs for automated stubble burning detection and verified burn-free certification.
+- 🚛 **Decentralized Logistics:** Geolocation-based truck dispatching to optimize collective residue aggregation routes.
+- 💳 **Micro-Financing:** Direct UPI payment integration with instant escrow settlement upon verified weigh-bridge delivery.
 
+---
+
+## 🤝 Contributing
+
+We welcome contributions to expand regional language datasets and agricultural models!
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AddTamilVoiceDialect`)
+3. Commit your Changes (`git commit -m 'feat: add Tamil voice support'`)
+4. Push to the Branch (`git push origin feature/AddTamilVoiceDialect`)
+5. Open a Pull Request
+
+---
+
+## 👩‍💻 Author & Accreditations
+
+**Prakruthi B R**  
+*BCA Student specializing in Artificial Intelligence & Machine Learning*  
+*Alliance University, Bengaluru (CGPA: 9.60)*  
+*GeeksforGeeks Campus Mantri (2026)*
+
+- 💻 **GitHub:** [@prakruthidevanga](https://github.com/prakruthidevanga)
+- 🔗 **LinkedIn:** [Prakruthi BR](https://linkedin.com/in/prakruthi-br)
+- 🌐 **Portfolio:** [prakruthidevanga.github.io](https://prakruthidevanga.github.io/)
+- 📬 **Email:** [prakruthibr2006@gmail.com](mailto:prakruthibr2006@gmail.com)
+
+---
+
+<p align="center">
+  <b>🌾 Bridging farmers, industries, and sustainable technology.</b>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:14532D,50:15803D,100:84CC16&height=110&section=footer" width="100%" alt="Agri-Bridge Footer"/>
+</p>
