@@ -1,8 +1,15 @@
 import os
+import sys
 import re
 import time
 from typing import List, Dict, Any, Optional
 from pathlib import Path
+
+# Ensure backend directory is in sys.path regardless of working directory
+BACKEND_DIR = Path(__file__).resolve().parent
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
 from fastapi import FastAPI, HTTPException, Request, Depends, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
@@ -28,12 +35,16 @@ default_origins = [
     "http://localhost:3000",
     "http://127.0.0.1:5173",
     "http://127.0.0.1:3000",
-    "https://agri-bridge.netlify.app"
+    "https://agri-bridge.netlify.app",
+    "https://agribridge-farmingmarketplace.netlify.app"
 ]
 
 env_origins = os.getenv("ALLOWED_ORIGINS", "")
 if env_origins:
     origins = [orig.strip() for orig in env_origins.split(",") if orig.strip()]
+    for d in default_origins:
+        if d not in origins:
+            origins.append(d)
 else:
     origins = default_origins
 
@@ -89,11 +100,16 @@ class ListingCreate(BaseModel):
     date: str = Field(..., min_length=1)
 
 class DemandCreate(BaseModel):
-    type: str = Field(..., min_length=1)
-    qty: float = Field(..., gt=0)
-    budget: float = Field(..., gt=0)
-    location: str = Field(..., min_length=1)
-    by: str = Field(..., min_length=1)
+    type: Optional[str] = Field(None)
+    waste_type: Optional[str] = Field(None)
+    qty: Optional[float] = Field(None, gt=0)
+    quantity: Optional[float] = Field(None, gt=0)
+    budget: Optional[float] = Field(None, gt=0)
+    budget_per_tonne: Optional[float] = Field(None, gt=0)
+    location: Optional[str] = Field(None)
+    delivery_location: Optional[str] = Field(None)
+    by: Optional[str] = Field(None)
+    required_by: Optional[str] = Field(None)
 
 class DealCreate(BaseModel):
     farmer: str = Field(..., min_length=1)
@@ -264,7 +280,8 @@ async def login(payload: UserLogin):
         "phone": user_doc["phone"],
         "name": user_doc["name"],
         "role": user_doc["role"],
-        "location": user_doc["location"]
+        "location": user_doc["location"],
+        "preferred_language": user_doc.get("preferred_language", "English")
     })
     return {
         "token": token,
@@ -273,6 +290,10 @@ async def login(payload: UserLogin):
             "name": user_doc["name"],
             "role": user_doc["role"],
             "location": user_doc["location"],
+            "village": user_doc.get("village"),
+            "district": user_doc.get("district"),
+            "company": user_doc.get("company"),
+            "preferred_language": user_doc.get("preferred_language", "English"),
             "earned": user_doc.get("earned", "₹0"),
             "sold": user_doc.get("sold", "0 T"),
             "co2": user_doc.get("co2", "0 T"),
@@ -362,15 +383,26 @@ async def create_demand(payload: DemandCreate, current_user: Dict[str, Any] = De
         raise HTTPException(status_code=403, detail="Only industry users are authorized to post demands")
 
     demand_id = int(time.time() * 1000)
+    resolved_type = payload.type or payload.waste_type or "Paddy Straw"
+    resolved_qty = payload.qty or payload.quantity or 10.0
+    resolved_budget = payload.budget or payload.budget_per_tonne or 2000.0
+    resolved_location = payload.location or payload.delivery_location or "Karnataka"
+    resolved_by = payload.by or payload.required_by or "2026-12-31"
+
     demand_doc = {
         "id": demand_id,
         "user_phone": current_user["phone"],
-        "company": current_user["name"],
-        "type": payload.type,
-        "qty": payload.qty,
-        "budget": payload.budget,
-        "location": payload.location,
-        "by": payload.by,
+        "company": current_user.get("company") or current_user.get("name"),
+        "type": resolved_type,
+        "waste_type": resolved_type,
+        "qty": resolved_qty,
+        "quantity": resolved_qty,
+        "budget": resolved_budget,
+        "budget_per_tonne": resolved_budget,
+        "location": resolved_location,
+        "delivery_location": resolved_location,
+        "by": resolved_by,
+        "required_by": resolved_by,
         "status": "open",
         "created_at": int(time.time())
     }

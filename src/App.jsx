@@ -2195,15 +2195,15 @@ export default function App() {
           if (Array.isArray(data)) {
             setMyListings(data.map(d => ({
               id: d.id,
-              farmer: d.farmer_name || user.name,
-              village: d.location || user.location,
-              waste: d.waste_type,
-              qty: d.quantity,
-              price: d.price_per_tonne,
+              farmer: d.farmer || d.farmer_name || user.name,
+              village: d.village || d.location || user.location,
+              waste: d.waste || d.waste_type,
+              qty: d.qty !== undefined ? d.qty : d.quantity,
+              price: d.price !== undefined ? d.price : d.price_per_tonne,
               icon: d.icon || "🌾",
-              distance: 5,
-              rating: 4.8,
-              co2: d.co2_factor || 1.0,
+              distance: d.distance || 5,
+              rating: d.rating || 4.8,
+              co2: d.co2 !== undefined ? d.co2 : (d.co2_factor || 1.0),
               mine: true
             })));
           }
@@ -2219,12 +2219,12 @@ export default function App() {
           if (Array.isArray(dealsData)) {
             setMyDeals(dealsData.map(d => ({
               id: d.id,
-              farmer: d.farmer_name,
-              waste: d.waste_type,
-              qty: d.quantity,
-              price: d.price_per_tonne,
-              status: d.status,
-              co2: d.co2_saved,
+              farmer: d.farmer_name || d.farmer,
+              waste: d.waste || d.waste_type,
+              qty: d.qty !== undefined ? d.qty : d.quantity,
+              price: d.price !== undefined ? d.price : d.price_per_tonne,
+              status: d.status || "Pending",
+              co2: d.co2 !== undefined ? d.co2 : d.co2_saved,
               icon: d.icon || "🌾"
             })));
           }

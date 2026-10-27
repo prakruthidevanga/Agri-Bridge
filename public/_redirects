@@ -1,0 +1,3 @@
+# Agri-Bridge Netlify Configuration
+# Ensures client-side SPA routing works across page refreshes
+/*    /index.html   200
